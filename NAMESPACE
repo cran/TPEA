@@ -1,0 +1,6 @@
+exportPattern("^[[:alpha:]]+")
+import(Matrix)
+import(foreach)
+import(MESS)
+importFrom("stats", "sd")
+importFrom("utils", "browseURL", "data")
