@@ -2,3 +2,35 @@ all_datasets                Load all data sets we need
 AUCSC                       Calculate Calculate the area under the cumulative score of node curve based on the gene set, such as differentially expressed gene set
 TPEA                        Extract gene from background gene randomly and the size of genes are equal to the differentially expressed genes.Obtain the p-value of the significance
 viewpathway                 Obtain the KEGG pathway you interested and input the number in KEGG Database, such as "hsa05210"
+ViewLatestTime              Check up the latest date of KGML files from KEGG database.
+DownloadKGML                  Download the latest KGML files from KEGG database.
+PathNetwork                 Reconstruct pathways to networks based on KGML files from KEGG database.
+NodeGeneData                Intergate list of node,gene and the score of node based on latest KGML files from KEGG database.
+NodeGene                    Restract the relationship between nodes and genes.
+importLatesData            Import the latest relationship information about node,gene and score.
+filterNode                  Filter the nodes in pathways.
+getEntry                    Obtain the nodes.
+getGeneFromEnzyme           Obtain the genes from enzymes.
+getGeneFromKGene            Obtain the genes from KGenes.
+getGeneFromKO               Obtain the genes from KO.
+getGraphics                 Recontructe the network based on pathways.
+getKGeneFromEnzyme          Obtain genes from KGnenes.
+getKGeneFromKO              Obtain the genes from KO.
+getUnknowSubtype            Obtain the types of genes in pathways.
+mapNode                     Obtain the relationship of nodes and genes.
+simplifyGraph               Recontructe the network based on pathways.
+UPDATE                      Update the latest data from KEGG database.
+getNonMetabolocGraph        Convert the non-metaboloc pathway to network.
+getOrgAndIdType             Get the type names of nodes. 
+getPathway                  Get the pathway.
+getProduct                  Get the products.
+getReaction                 Get the reaction of nodes in pathways.
+getRelation                 Get the relation of nodes in pathways.
+getSimpleGraph              Obtain the graph of pathways.
+getSubstrate                Obtain the information about nodes in KEGG database.
+getSubtype                  Get the type of nodes.
+getUGraph                   Obtain the graph of pathways.
+getUnknowProduct            Get the products.
+getUnknowReaction           Get the reaction of nodes in pathways.
+getUnknowRelation           Get the relation of nodes in pathways.
+getUnknowSubstrate          Obtain the information about nodes in KEGG database.

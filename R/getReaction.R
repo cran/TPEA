@@ -1,0 +1,38 @@
+getReaction <-
+function(reaction){
+     reactionlist<-list()
+     substrate<-list()
+     product<-list()
+     childrenlength<-0
+     sk<-0
+     pk<-0
+	 xml_children<-xmlChildren(reaction)
+     childrenlength<-length(xml_children)
+     if(childrenlength>=1){
+         for(i in 1:childrenlength){
+		      xml_children_i<-xml_children[[i]]
+		      xml_name<-xmlName(xml_children_i)
+              if(xml_name=="substrate"){
+                  sk<-sk+1
+				  substrate[[sk]]<-getSubstrate(xml_children_i)
+              }
+              if(xml_name=="product"){
+                  pk<-pk+1
+				  product[[pk]]<-getProduct(xml_children_i)
+              }
+          }
+		  if(sk<1){substrate[[1]]<-getUnknowSubstrate()}
+		  if(pk<1){product[[1]]<-getUnknowProduct()}
+      }
+	 else{
+	     substrate[[1]]<-getUnknowSubstrate()
+		 product[[1]]<-getUnknowProduct()
+	 }
+	 reactionlist[[1]]<-xmlGetAttr(reaction,"id","unknow")
+     reactionlist[[2]]<-xmlGetAttr(reaction,"name","unknow")
+     reactionlist[[3]]<-xmlGetAttr(reaction,"type","unknow")
+     reactionlist[[4]]<-substrate
+     reactionlist[[5]]<-product
+     names(reactionlist)<-c("id","name","type","substrate","product")
+     return(reactionlist)
+}
