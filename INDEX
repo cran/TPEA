@@ -1,5 +1,5 @@
 all_datasets                Load all data sets we need
-AUCSC                       Calculate Calculate the area under the cumulative score of node curve based on the gene set, such as differentially expressed gene set
+AUEC                        Calculate Calculate the area under the cumulative enrichment curve based on the gene set, such as differentially expressed gene set
 TPEA                        Extract gene from background gene randomly and the size of genes are equal to the differentially expressed genes.Obtain the p-value of the significance
 viewpathway                 Obtain the KEGG pathway you interested and input the number in KEGG Database, such as "hsa05210"
 ViewLatestTime              Check up the latest date of KGML files from KEGG database.

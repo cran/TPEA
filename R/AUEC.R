@@ -1,4 +1,4 @@
-AUCSC <-
+AUEC <-
 function(DEGs){
 pkgEnv <- new.env(parent=emptyenv())
 if(!exists("all_genes", pkgEnv)) {

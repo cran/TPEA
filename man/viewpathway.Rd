@@ -29,7 +29,7 @@ Wei Jiang
 }
 \examples{
 DEGs<-c(836,842,5594,595);
-genes<-as.data.frame(DEGs);
+DEG<-as.data.frame(DEGs);
 pathwayID<-"hsa05210";
-viewpathway(pathwayID,genes);
+viewpathway(pathwayID,DEG);
 }

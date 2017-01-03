@@ -19,7 +19,7 @@ DEG1<-as.data.frame(DEG1);
 num<-sample(1:nrow(all_genes),size=nrow(DEG1));
 rand_genes<-all_genes[num,1];
 rand_genes<-as.data.frame(rand_genes);
-rand_area<-AUCSC(rand_genes);
+rand_area<-AUEC(rand_genes);
 rand_area[,2]<-as.matrix(rand_area[,2]);
 all_rand_area<-cbind(all_rand_area,rand_area[,2]);
 print(i);
@@ -34,7 +34,7 @@ nor_area<-(all_rand_area[j,1]-mean(all_rand_area[j,-1]))/sd(all_rand_area[j,-1])
 N_AUCSC<-rbind(N_AUCSC,nor_area);
 }
 result<-cbind(pathway_names,scores[,1],p_value,N_AUCSC);
-names(result)<-c("KEGGID","KEGG pathway","Count","P_value","N_AUCSC");
+names(result)<-c("KEGG ID","KEGG pathway","Count","P_value","N_AUCSC");
 result<-result[order(result[,4]),];
 return(result);
 }
