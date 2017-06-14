@@ -4,10 +4,10 @@
 Statistical test and calculate the significance
 }
 \description{
-Comparing with the R_AUEC which the interested gene set extract from the background gene set randomly and the corresponding AUEC based on interested gene set you input. The last step is to calculate the significance.
+Comparing with the AUEC_R which the interested gene set extract from the background gene set randomly and the corresponding AUEC based on interested gene set you input. The last step is to calculate the significance.
 }
 \usage{
-TPEA(DEGs, scores, n)
+TPEA(DEGs, scores, n, FDR_method)
 }
 \arguments{
   \item{DEGs}{
@@ -18,6 +18,9 @@ The "AUEC" based on the interested gene set of 87 pathways.
 }
   \item{n}{
 Randomly number,e.g. 1000, 5000.
+}
+\item{FDR_method}{
+The methods of calculating FDR value,e.g. "fdr","BH","BY" ,"bonferroni" and etc..
 }
 }
 \details{
@@ -41,5 +44,6 @@ number<-50;
 ##Calculate the observed statistic
 scores<-AUEC(DEG);
 ##Significant computational
-results<-TPEA(DEG,scores,number);
+FDR_method<-"fdr";
+results<-TPEA(DEG,scores,number,FDR_method);
 }

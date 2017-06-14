@@ -1,5 +1,5 @@
 TPEA <-
-function(DEGs,scores,n){
+function(DEGs,scores,n,FDR_method){
 pkgEnv <- new.env(parent=emptyenv())
 if(!exists("all_genes", pkgEnv)) {
   data("all_genes", package="TPEA", envir=pkgEnv)
@@ -26,15 +26,22 @@ print(i);
 }
 all_rand_area[,1]<-scores[,2];
 p_value<-data.frame();
-N_AUCSC<-data.frame();
+N_AUEC<-data.frame();
 for(j in 1:87){
 p<-length(which(all_rand_area[j,-1]>=all_rand_area[j,1]))/number;
 p_value<-rbind(p_value,p);
 nor_area<-(all_rand_area[j,1]-mean(all_rand_area[j,-1]))/sd(all_rand_area[j,-1]);
-N_AUCSC<-rbind(N_AUCSC,nor_area);
+N_AUEC<-rbind(N_AUEC,nor_area);
 }
-result<-cbind(pathway_names,scores[,1],p_value,N_AUCSC);
-names(result)<-c("KEGG ID","KEGG pathway","Count","P_value","N_AUCSC");
-result<-result[order(result[,4]),];
-return(result);
+
+result1<-cbind(pathway_names,scores[,1],p_value,N_AUEC);
+
+p_v<-as.matrix(p_value);
+FDR<-p.adjust(p_v,method=FDR_method,n=87);
+FDR<-as.matrix(FDR);
+colnames(FDR)<-c("FDR");
+result1<-as.matrix(result1);
+result2<-cbind(result1,FDR);
+result2<-result2[order(result2[,4]),];
+return(result2);
 }

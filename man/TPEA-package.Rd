@@ -2,10 +2,10 @@
 \alias{TPEA-package}
 \docType{package}
 \title{
-TPEA: A novel topology-based pathway enrichment analysis approach
+TPEA: A Novel Pathway enrichment analysis approach based on topological structure and updated annotation of pathway
 }
 \description{
-This package descirbed a novel topology-based pathway enrichment analysis approach which integrated the topological property of the pathway and the global position of nodes in pathways.Additionally,it also provided the update functions which could obtain the latest pathway information from KEGG database and users can use the latest information to do the pathway enrichment analysis.
+This package descirbed A Novel Pathway enrichment analysis approach based on topological structure and updated annotation of pathway which integrated the topological property of the pathway and the global position of nodes in pathways.Additionally,it also provided the update functions which could obtain the latest pathway information from KEGG database and users can use the latest information to do the pathway enrichment analysis.
 }
 \details{
 The function AUEC is to calculate the area under the cumulative enrichment curve.
