@@ -12,7 +12,7 @@ if(!exists("pathway_names", pkgEnv)) {
 all_genes<-da1;
 pathway_names<-da2;
 number<-n;
-all_rand_area<-matrix(0,87,1);
+all_rand_area<-matrix(0,109,1);
 for(i in 1:number){
 DEG1<-intersect(DEGs[,1],all_genes[,1]);
 DEG1<-as.data.frame(DEG1);
@@ -27,7 +27,7 @@ print(i);
 all_rand_area[,1]<-scores[,2];
 p_value<-data.frame();
 N_AUEC<-data.frame();
-for(j in 1:87){
+for(j in 1:109){
 p<-length(which(all_rand_area[j,-1]>=all_rand_area[j,1]))/number;
 p_value<-rbind(p_value,p);
 nor_area<-(all_rand_area[j,1]-mean(all_rand_area[j,-1]))/sd(all_rand_area[j,-1]);
@@ -37,7 +37,7 @@ N_AUEC<-rbind(N_AUEC,nor_area);
 result1<-cbind(pathway_names,scores[,1],p_value,N_AUEC);
 
 p_v<-as.matrix(p_value);
-FDR<-p.adjust(p_v,method=FDR_method,n=87);
+FDR<-p.adjust(p_v,method=FDR_method,n=109);
 FDR<-as.matrix(FDR);
 colnames(FDR)<-c("FDR");
 result1<-as.matrix(result1);

@@ -20,7 +20,7 @@ true_area<-data.frame();
 count<-data.frame();
 DEG<-intersect(DEGs[,1],all_genes[,1]);
 DEG<-as.data.frame(DEG);
-for(i in 1:87){
+for(i in 1:109){
     node_gene_score <- num_node_gene_score[i];
     node_gene_score <- as.data.frame(node_gene_score);
     step1 <- node_gene_score[which(node_gene_score[, 3]%in%DEG[, 1]), c(1,3,4)];

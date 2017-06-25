@@ -15,7 +15,7 @@ The interested genes you input and the format must be "Entrez ID". If not,transl
 \details{
 The function only identifies Entrez ID of genes. The nodes are sorted by their AUEC in the pathway. If genes locates on the upstream or the nodes with high degree in a certain pathway, the AUEC of this pathway is high.
 }
-\value{The AUEC of 87 pathways based on the interested gene set.}
+\value{The AUEC of 109 pathways based on the interested gene set.}
 \author{
 Wei Jiang
 }

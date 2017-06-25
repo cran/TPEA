@@ -14,7 +14,7 @@ TPEA(DEGs, scores, n, FDR_method)
 Interested gene set such as differentailly expressed gene set.
 }
   \item{scores}{
-The "AUEC" based on the interested gene set of 87 pathways.
+The "AUEC" based on the interested gene set of 109 pathways.
 }
   \item{n}{
 Randomly number,e.g. 1000, 5000.
@@ -37,7 +37,7 @@ Wei Jiang
 ##Randomly generated interested gene set
 ViewLatestTime()
 ##If you want to use the latest information,please run "UPDATE()".
-DEGs<-sample(100:10000,15);
+DEGs<-sample(100:10000,10);
 DEG<-as.matrix(DEGs);
 ##Set the times of perturbation
 number<-50;
