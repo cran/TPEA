@@ -34,9 +34,11 @@ Wei Jiang
 
 }
 \examples{
-##Randomly generated interested gene set
-ViewLatestTime()
+\dontrun{
 ##If you want to use the latest information,please run "UPDATE()".
+ViewLatestTime()
+}
+##Randomly generated interested gene set
 DEGs<-sample(100:10000,10);
 DEG<-as.matrix(DEGs);
 ##Set the times of perturbation

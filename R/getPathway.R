@@ -12,7 +12,7 @@ function(path,filelist=list.files(path),verbose=FALSE){
       		  
 		    
 	  top_temp<-tryCatch(xmlTreeParse(paste(path,filelist[[j]],sep=""),error=NULL),error=function(e) "error")
-    if(class(top_temp)[1]=="character"){
+    if(is.character(top_temp)){
 	   if(verbose==TRUE){
          cat(paste("warning:the pathway ",filelist[j]," don't exist or has errors.\n Therefore, it is deleted from lists.\n",sep=""))
        }		 

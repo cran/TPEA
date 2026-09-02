@@ -28,8 +28,10 @@ Wei Jiang
 
 }
 \examples{
+\dontrun{
 DEGs<-c(836,842,5594,595);
 DEG<-as.data.frame(DEGs);
 pathwayID<-"hsa05210";
 viewpathway(pathwayID,DEG);
+}
 }

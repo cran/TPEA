@@ -1,19 +1,19 @@
 Package: TPEA
 Type: Package
 Title: A Novel Topology-Based Pathway Enrichment Analysis Approach
-Version: 3.1.0
-Date: 2017-6-25
-Author: Wei Jiang
-Maintainer: Wei Jiang <jiangwei@hrbmu.edu.cn>
+Version: 3.1.1
+Date: 2026-09-02
+Authors@R: person(given = "Wei", family = "Jiang", role = c("aut", "cre"), email = "jiangwei@hrbmu.edu.cn")
 Description: We described a novel Topology-based pathway enrichment analysis, which integrated the global position of the nodes and the topological property of the pathways in  Kyoto Encyclopedia of Genes and Genomes Database.
-             We also provide some functions to obtain the latest information about pathways to finish pathway enrichment analysis using this method. 
+             We also provide some functions to obtain the latest information about pathways to finish pathway enrichment analysis using this method.
 License: GPL-2
-Depends: R (>= 2.10), MESS, Matrix, foreach
+Depends: R (>= 3.5.0), MESS, Matrix, foreach
 Imports: XML, RCurl, utils, igraph
 Suggests: geeM, geepack
 LazyData: true
-LazyLoad: yes
 NeedsCompilation: no
-Packaged: 2017-06-25 01:36:20 UTC; Administrator
+Packaged: 2026-09-02 03:59:16 UTC; root
+Author: Wei Jiang [aut, cre]
+Maintainer: Wei Jiang <jiangwei@hrbmu.edu.cn>
 Repository: CRAN
-Date/Publication: 2017-06-25 15:42:32 UTC
+Date/Publication: 2026-09-02 09:30:11 UTC

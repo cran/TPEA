@@ -7,7 +7,7 @@ function(graphList,nodeType="geneProduct",directEdge=TRUE,verbose=FALSE){
      graphList<-list()
      if(pathwayListLength>0){
     for(i in 1:pathwayListLength){
-         if(class(pathwayList[[i]])!="igraph") stop(paste("graph ",i," must belong to a igraph class in graphList",sep=""))
+         if(!inherits(pathwayList[[i]],"igraph")) stop(paste("graph ",i," must belong to a igraph class in graphList",sep=""))
          #if(is.directed(pathwayList[[i]])==FALSE) stop(paste("graph ",i," must be directed in graphList",sep=""))
    	     if(verbose==TRUE)
            print(paste("deal with the graph ",i," in ",pathwayListLength, " graphs",sep="")) 
